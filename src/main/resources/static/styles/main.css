@@ -1,0 +1,17 @@
+body {
+    background-image:url("../images/back.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(28,115,123,0.59);
+
+}
+
+
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 25rem;
+}
