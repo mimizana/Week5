@@ -5,19 +5,17 @@
     <title>Job Postings</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <div th:replace="base :: headerfg"></div>
     <link rel="stylesheet" th:href="@{/styles/main.css}">
 </head>
 <body>
 <div th:replace="base :: navlinksfg"></div>
-<h1>Job Postings</h1>
-
 <table class="table">
     <thead class="thead-dark">
     <th scope="col-3"></th>
     <th scope="col-6">Job Posting</th>
     <th scope="col-3"></th>
+    <br/>
+    <br/>
     </thead>
     <tbody>
     <tr th:each="user : ${users}">

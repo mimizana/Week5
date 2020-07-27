@@ -5,10 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.HashSet;
-import java.util.Set;
-
 @Controller
 public class HomeController {
     @Autowired
@@ -37,7 +33,7 @@ public class HomeController {
     @RequestMapping("/detailUse/{id}")
     public String detailUse(@PathVariable("id") long id, Model model){
         model.addAttribute("user", userRepository.findById(id).get());
-        return "detailUser";
+        return "detailUse";
 
     }
 
@@ -55,7 +51,7 @@ public class HomeController {
 
     @RequestMapping("/listJobs")
     public String listJobs(Model model) {
-        model.addAttribute("Jobs", jobRepository.findAll());
+        model.addAttribute("jobs", jobRepository.findAll());
         return "listJobs";
     }
 
@@ -78,7 +74,7 @@ public class HomeController {
     public String updateJobs(@PathVariable("id") long id, Model model){
         Job job = jobRepository.findById(id).get();
         model.addAttribute("job", job);
-        model.addAttribute("jobs", userRepository.findAll());
+        model.addAttribute("users", userRepository.findAll());
         return "addJobs";
     }
 

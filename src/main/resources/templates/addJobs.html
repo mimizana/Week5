@@ -11,10 +11,7 @@
     body {
     text-align: center;
     }
-    form {
-    margin-top: 5rem;
-    display: inline-block;
-    }
+
     </style>
 
 </head>
@@ -40,6 +37,15 @@
     <input type="text" th:field="*{phone}"/>
     <br/>
     <br>
+    Choose a Person:
+
+    <select th:field="*{user.id}">
+        <option th:each="use : ${users}"
+                th:value="${use.id}"
+                th:text="${use.name}"></option>
+    </select>
+
+    <br/>
     <input type="submit" value="New Job">
 </form>
 <
